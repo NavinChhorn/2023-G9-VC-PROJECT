@@ -13,6 +13,7 @@ use App\Http\Controllers\ScholarshipController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkShopController;
 use App\Http\Controllers\Workshops;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -85,3 +86,6 @@ Route::post('/registerMail',[UserController::class,'sendEmail']);
 
 // get user that already register in workshop
 Route::post('/registerWorkShop', [RegisterWorkShopController::class, 'registerWorkShop']);
+
+// count user in workshop
+Route::get('/workshops/{workshopId}', [WorkShopController::class, 'countUsersInWorkshop']);

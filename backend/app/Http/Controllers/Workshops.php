@@ -33,5 +33,4 @@ class Workshops extends Controller
 
 
     }
-
 }

@@ -35,7 +35,7 @@ export default {
     // copy https://stackoverflow.com/questions/52021405/vue-js-laravel-handle-logout-correctly
     setUser() {
       // Get the value of the "userData" cookie
-      const userData = Cookies.get("userData");
+      const userData = Cookies.get("submitLogOut");
       // If the "userData" cookie exists, parse it and set the user ID in the component data
       if (userData) {
         const userDataObj = JSON.parse(userData);

@@ -10,4 +10,9 @@ class WorkshopUser extends Model
 {
     use HasFactory;
     protected $fillable = ['user_id', 'workshop_id'];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'workshop_users', 'workshop_id', 'user_id');
+    }
 }

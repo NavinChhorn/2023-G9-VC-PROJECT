@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\WorkShop;
-use Illuminate\Http\Request;
+use App\Models\WorkshopUser;
 
 class WorkShopController extends Controller
 {
@@ -17,34 +17,22 @@ class WorkShopController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Create user for count user
      */
-    public function store(Request $request)
+    public function countUsersInWorkshop($workshopId)
     {
-        //
-    }
+        if (!is_numeric($workshopId) || $workshopId <= 0) {
+            return response()->json(['error' => 'Invalid workshop ID'], 400);
+        }
+    
+        // Check if the workshop with the specified ID exists
+        $workshop = Workshop::find($workshopId);
+    
+        if (!$workshop) {
+            return response()->json(['error' => 'Workshop not found'], 404);
+        }
+        $userCount = WorkshopUser::where('workshop_id', $workshopId)->count();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return response()->json(['user_count' => $userCount]);
     }
 }
