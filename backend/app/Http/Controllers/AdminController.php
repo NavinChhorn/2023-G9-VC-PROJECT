@@ -14,7 +14,7 @@ class AdminController extends Controller
     public function index()
     {
         //
-        $users = User::orderBy('id', 'DESC')->get();
+        $users = User::orderBy('id', 'DESC')->where('role_id',"!=",3)->get();
         return response()->json(['message' => "Your get user is success", 'data' => $users], 200);
 
     }

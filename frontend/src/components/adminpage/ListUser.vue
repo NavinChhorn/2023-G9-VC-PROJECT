@@ -12,9 +12,9 @@
       <tbody>
         <tr v-for="(data, index) in datas" :key="index" class="text-center">
           <td>{{ index + 1 }}</td>
-          <td>{{ data.name }}</td>
+          <td >{{ data.name }}</td>
           <td>{{ data.email }}</td>
-          <td>
+          <td >
               <span
                 class="mdi mdi-pencil"
                 @click="openDialogEdit(data.id)"

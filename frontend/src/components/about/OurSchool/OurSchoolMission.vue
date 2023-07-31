@@ -2,7 +2,7 @@
   <div class="mision">
     <div class="text">
       <div class="missiontext">
-        <h4>MISSION</h4>
+        <h2>MISSION</h2>
         <p>
           Passerelles numériques is a non-profit organization under French law,
           created in 2005, operating in three Asian countries: Cambodia, the
@@ -37,12 +37,17 @@
   margin-top:20px ;
   
 }
+.missiontext{
+  padding-right: 40px;
+  text-align:start ;
+}
 .text {
  
   margin: auto;
   width: 60%;
 }
-h4{
+h2{
    color: orange;
+   margin-bottom: 15px;
 }
 </style>

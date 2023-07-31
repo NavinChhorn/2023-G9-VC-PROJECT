@@ -145,6 +145,11 @@ import RegisterWorkshop from './components/workshop/RegisterAccountPopUp.vue'
 app.component("register-account-popup",RegisterWorkshop)
 
 
+router.beforeEach((to, from, next) => {
+  const DEFAULT_TITLE = 'Find University'; // Set a default title for the website
+  document.title = to.name ? to.name + ' - ' + DEFAULT_TITLE : DEFAULT_TITLE;
+  next();
+});
 
 app.use(router);
 app.use(vuetify);

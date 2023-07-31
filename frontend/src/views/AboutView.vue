@@ -19,6 +19,7 @@
   }
   h1{
     color: orange;
+    margin: 30px;
   }
 </style>
 

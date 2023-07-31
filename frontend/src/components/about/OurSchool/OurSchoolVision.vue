@@ -2,14 +2,14 @@
   <div class="mision">
     <div class="text">
       <div class="missiontext">
-        <h4>VALUE</h4>
-        <p>
+        <h2>VALUE</h2>
+        <h4>
           Trust <br />
           Responsibility <br />
           Solidarity <br />
           Respect <br>
           Demanding approach
-        </p>
+        </h4>
       </div>
     </div>
     <div class="image">
@@ -35,7 +35,9 @@
   text-align: center;
   width: 60%;
 }
-h4{
+h2{
   color: orange;
+   margin-bottom: 15px;
+
 }
 </style>

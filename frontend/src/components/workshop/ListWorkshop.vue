@@ -13,7 +13,6 @@
             Expired Date
           </th>
           <th class="text-center" style="width: 10%; color: #ffffff">Time</th>
-          <th class="text-center" style="width: 10%; color: #ffffff">Full</th>
           <th class="text-center" style="width: 10%; color: #ffffff">
             User Number
           </th>
@@ -34,7 +33,6 @@
           <td>{{ data.start_date }}</td>
           <td>{{ data.expired_date }}</td>
           <td>{{ data.time }}</td>
-          <td>{{ data.full }}</td>
           <td>{{ data.user_number }}</td>
           <td>{{ data.description }}</td>
           <td>
@@ -150,6 +148,7 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .edit,
 .delete {

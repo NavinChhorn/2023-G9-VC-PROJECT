@@ -14,8 +14,12 @@ class SkillResource extends JsonResource
      */
     public function toArray($request)
     {
-        return $this->only('id','name','description') + [
-            "image" => $this->media->file_url ?? null,
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'description' => $this->description,
+            'subjects' => SubjectResource::collection($this->subjects),
+            'image' => $this->media->file_url ?? null,
         ];
     }
 }

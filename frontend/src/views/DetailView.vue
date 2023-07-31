@@ -1,7 +1,7 @@
 <template>
-    <div class="btn "> 
-        <router-link to="/"><v-tab>Back</v-tab></router-link>
-    </div>
+    <!-- <div class="btn" to="/"> -->
+        <v-btn class="btn" to="/" >Back</v-btn>
+    <!-- </div> -->
     <div class="cardImage">
         <card-item class="ms-12 me-12 mt-10 mb-5">
         <template #img>    <v-img
@@ -74,23 +74,21 @@ import axios from 'axios';
         width: 100%;
         margin-top:30px ;
     }
-    .btn{
+    /* .btn{
         display: flex;
         flex-direction: column;
         justify-content:end;
-    }
+    } */
     h1,h3{
         text-align: center;
     }
 
-    button{
-        padding:20px ;
-        border-radius:20px;
-        border:none;
+    .btn{
         color:white;
         background:orange;
         width: 10%;
-        margin:10px;
+        margin-left:3.5%;
+        margin-top: 3%;
     }
     
 </style>

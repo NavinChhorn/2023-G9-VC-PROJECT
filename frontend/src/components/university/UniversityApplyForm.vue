@@ -4,8 +4,8 @@
         <div class="container"  >
           <div class="image">
             <img 
-              src="https://img.freepik.com/premium-vector/happy-graduated-students-illustration_179970-1004.jpg?w=996"
-              style="width: 600px; height: 500px"
+              src="../../assets/images/apply.jpg"
+              style="width: 500px; height: 500px"
               alt="Image description"
             />
         </div>

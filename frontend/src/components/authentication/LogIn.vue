@@ -73,7 +73,6 @@
       },
       methods:{
         logIn(){
-          this.$router.push('/');
           const data = {
           email: this.email,
           password: this.password,
@@ -82,7 +81,8 @@
           .then((res) => {
             if (res.status === 200) {
               Cookies.set("userData", JSON.stringify(res.data), { expires: 30 });
-              location.reload();
+              this.$router.push('/');
+             
               
             } else {
               this.valid = false;

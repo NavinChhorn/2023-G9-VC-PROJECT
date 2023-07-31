@@ -1,7 +1,7 @@
 <template>
 <section>
 
- <title-text v-if='datas!=null && datas!=""'>Choose {{dataname}}</title-text>
+ <title-text v-if='datas!=null && datas!="" && datas!=[]'>Choose {{dataname}}</title-text>
       <div class="container " v-for="(data) in datas" :key="data.id">
         <div v-if="isNotExpired(data)" class="card" >
           <div class="image">
@@ -93,6 +93,7 @@ import Cookies from 'js-cookie';
     justify-content: center;
     width:60%;
     margin-left:20px;
+
   }
 
   img{
@@ -109,7 +110,7 @@ import Cookies from 'js-cookie';
     width:100%;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    padding: 10px;
+    padding: 40px;
   }
 
   .btn{

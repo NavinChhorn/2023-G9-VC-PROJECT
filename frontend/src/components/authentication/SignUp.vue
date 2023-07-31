@@ -165,6 +165,7 @@ async function singIn() {
     // Check the server response and alert the user accordingly
     if (response.status === 200) {
       clear();
+      this.$router.push('/')
     } else {
       alert("Failed to singIn the form");
     }
